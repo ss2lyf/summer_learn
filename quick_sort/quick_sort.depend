@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1532964065 source:c:\users\simon\desktop\progects\summer_test\quick_sort\main.cpp
+	<iostream>
+	<malloc.h>
+
