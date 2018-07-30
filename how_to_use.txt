@@ -1,0 +1,8 @@
+git pull --rebase origin master 本地与远程的合并
+git config --global user.name "xxxx" 
+git config --global user.email xxxxx@qq.com 
+git init  
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/ss2lyf/summer_learn.git
+git push origin master

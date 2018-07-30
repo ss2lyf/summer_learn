@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1532959773 source:c:\users\simon\desktop\progects\summer_test\merge_sort_r\main.cpp
+	<iostream>
+	<malloc.h>
+
