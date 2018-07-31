@@ -3,27 +3,37 @@
 #include<algorithm>
 using namespace std;
 
-int bn_search(int num,int* a,int want)
+int bn_search(int num,int* a,int b_point,int e_point,int want)
 {
     int middle;
-    int b_point=0,e_point=num-1; //两个指针
-    while(b_point<=e_point)
+    if(num>1)
     {
-        middle=b_point+(e_point-b_point)/2;
-        if(want>a[middle])
+        middle=(num)/2+b_point;
+        if(want>a[middle]) //如果在后一半的话，就去后一半找
         {
-            b_point=middle+1;
+            return  bn_search( num-num/2-1, a,middle+1,e_point,want);
         }
-        else if (want==a[middle])
+        else if(want==a[middle]) //等于的话就返回
         {
             return middle;
         }
-        else
+        else  //不然就在后一半找
         {
-            e_point=middle-1;
+            return bn_search( num/2, a,b_point,middle-1,want);
         }
     }
-    return -1; // 如果没有找到相应的位置的话，就返回-1
+    else  //当只有一个数的时候
+    {
+
+        if(a[b_point]==want)
+        {
+            return b_point;
+        }
+        else
+        {
+            return -1;
+        }
+    }
 }
 
 int main()
@@ -49,9 +59,10 @@ int main()
         cout<<a[i]<<"  ";
     }
     cout<<endl;
+
     cout<<"Please input the num you want to search: " ;
     cin>>want;
-    location=bn_search(num,a,want);
+    location=bn_search(num,a,0,num-1,want);
     if(location==-1)
     {
         cout<<"Sorry, we can't find the number you want."<<endl;
