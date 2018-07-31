@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533031495 source:c:\users\simon\desktop\progects\summer_test\score_sort_with_vector\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
