@@ -37,6 +37,21 @@ int main()
                 }
             }
         }
+         for(i=0; i<num; i++)
+    {
+        for(j=0; j<num; j++)
+        {
+            if(a[i][j]==1000)
+            {cout<<"*  ";
+
+        }else{
+
+        cout<<a[i][j]<< "  ";
+        }
+        cout<<endl;
+    }
+    cout << "Hello world!" << endl;
+
     }
     for(i=0; i<num; i++)
     {
