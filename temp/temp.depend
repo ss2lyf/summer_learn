@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533099350 source:c:\users\simon\desktop\progects\summer_test\temp\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

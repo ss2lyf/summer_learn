@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1533099702 source:c:\users\simon\desktop\progects\summer_test\sort_with_cmp\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<cstdio>
+	<cstring>
+
