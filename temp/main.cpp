@@ -1,49 +1,85 @@
-#include <cstdio>
-#include <cstring>
-#include <algorithm>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
 
-const int MAX = 1000;
+using namespace std;
 
-struct student
-{
-    int score;
-    int age;
-    char name[100];
-};
 
-bool cmp(student a, student b)
-{
-    if (a.score != b.score)
-    {
-        return a.score < b.score;
-    }
-    else if (strcmp(a.name, b.name) != 0)
-    {
-        return strcmp(a.name, b.name) < 0;
-    }
-    else
-    {
-        return a.age < b.age;
-    }
-}
 
-int main()
-{
-    student students[MAX];
+int main() {
+    // your code goes here
+    char ch1,ch2;
+    string s;
     int n;
-
+    int start,end;
+    bool flag = false;
+    while(cin >> n >> ch1 >> ch2)
     {
-        for (int i = 0; i < n; i++)
+        if(flag)
         {
-            scanf("%s%d%d", students[i].name,
-                &students[i].age, &students[i].score);
+            cout << endl;
         }
-        std::sort(students, students + n, cmp);
-        for (int i = 0; i < n; i++)
+        else
         {
-            printf("%s %d %d\n", students[i].name,
-                students[i].age, students[i].score);
+            flag = true;
         }
+        if(n == 1)
+        {
+            cout <<ch1 << endl;
+            //cout << endl;
+            continue;
+        }
+        if( ( (n + 1) / 2 & 1 ) == 0)
+        {
+            swap(ch1,ch2);
+        }
+        s = "";
+        vector<string> vec;
+
+        s.insert(0,n,ch1);
+        //cout << s << endl;
+        s[0] = ' ';
+        s[n - 1] = ' ';
+        vec.push_back(s);
+        s[0] = ch1;
+        s[n - 1] = ch1;
+
+        start = 0;
+        end = n - 1;
+        for(int  i = 1;i < (n + 1) / 2;++i)  //前后是对称的，只要保存一半
+        {
+            ++start;
+            --end;
+            if(i & 1)   //区分不同的行
+            {
+                 for(int i = start;i <= end;++i)
+                 {
+                    s[i] = ch2;
+                 }
+            }
+            else
+            {
+                 for(int i = start;i <= end;++i)
+                 {
+                    s[i] = ch1;
+                 }
+            }
+            vec.push_back(s);
+            //cout << "kk" << endl;
+        }
+        for(int i = 0;i < vec.size();++i)
+        {
+            cout << vec[i] << endl;
+        }
+        for(int i = vec.size() - 2;i >= 0;--i)
+        {
+            cout << vec[i] << endl;
+        }
+
+        //cout << endl;
+
     }
+
     return 0;
 }
