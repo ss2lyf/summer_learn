@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533134101 source:c:\users\simon\desktop\progects\summer_test\find_student\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1533125625 source:c:\users\simon\desktop\progects\summer_test\temp\main.cpp
-	<stdio.h>
+1533131220 source:c:\users\simon\desktop\progects\summer_test\temp\main.cpp
+	<iostream>
+	<vector>
 
