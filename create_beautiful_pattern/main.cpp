@@ -75,7 +75,6 @@ int main()
                 cout<<out[now];
             }
             cout<<" "<<endl;
-
         }
         else
         {
