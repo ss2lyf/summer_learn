@@ -7,20 +7,22 @@ int main()
     int a;
     cin>>a;
     int b=a+(a-1)*2;
-    int i,j,j1=a,j2=b-a;
-    cout<<j2<<endl;
+    int i,j,j2=b-a;
     for(i=0; i<a; i++)
     {
-        for(j=0; j<j2; j++)
+        for(j=0; j<b; j++)
         {
-            cout<<" ";
+            if(j<j2)
+            {
+                cout<<" ";
+            }
+            else
+            {
+                cout<<"*";
+            }
         }
         j2-=2;
-        for(j=0; j<j1; j++)
-        {
-            cout<<"*";
-        }
-        j1+=2;
         cout<<endl;
-        return 0;
     }
+    return 0;
+}
