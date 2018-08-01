@@ -5,23 +5,30 @@
 using namespace std;
 
 
-typedef struct student{
+typedef struct student
+{
     string name;
     int age;
     int score;
 
-}student;
+} student;
 bool cmp(student a,student b)
 {
     if(a.score!=b.score)
     {
         return a.score<b.score;
-    }else {
+    }
+    else
+    {
 
         if(a.name!=b.name)
-        {return a.name<b.name;
-        }else{
-        return a.age<b.age;}
+        {
+            return a.name<b.name;
+        }
+        else
+        {
+            return a.age<b.age;
+        }
     }
 
 }
@@ -32,14 +39,14 @@ int main()
     int i;
     cin>>num;
     vector <student> a (num);
-    for(i=0;i<num;i++)
+    for(i=0; i<num; i++)
     {
- cin>>a[i].name>>a[i].age>>a[i].score;
+        cin>>a[i].name>>a[i].age>>a[i].score;
     }
     sort(a.begin(),a.end(),cmp);
- for(i=0;i<num;i++)
+    for(i=0; i<num; i++)
     {
-       cout<<a[i].name<<" "<<a[i].age<<" "<<a[i].score<<endl;
+        cout<<a[i].name<<" "<<a[i].age<<" "<<a[i].score<<endl;
     }
     return 0;
 }
