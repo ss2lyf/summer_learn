@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533176224 source:c:\users\simon\desktop\progects\summer_test\bracket_matching\main.cpp
+	<iostream>
+	<stack>
+	<stdio.h>
+
