@@ -90,7 +90,7 @@ int main()
         {
             break;
         }
-        getchar();
+        getchar();//注意getcha对于字符很敏感，他能接受到之前的回车或者空格。
         while((ch=getchar())!='\n')
         {
             middle=ch;
