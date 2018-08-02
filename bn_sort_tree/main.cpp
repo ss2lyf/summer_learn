@@ -2,10 +2,11 @@
 #include<malloc.h>
 using namespace std;
 typedef struct node
-{struct node* lchild;
+{
+    struct node* lchild;
     struct node* rchild;
     int data;
-}node;
+} node;
 
 node* create_node(int num)
 {
@@ -14,25 +15,31 @@ node* create_node(int num)
     middle->lchild=NULL;
     middle->rchild=NULL;
     middle->data=num;
-            return middle;
+    return middle;
 }
 
 void add_node(node*a,int num)
-{    if(num>a->data)
+{
+    if(num>a->data)
     {
         if(a->rchild==NULL)
         {
-       a->rchild=create_node(num);
-        }else{
-        add_node(a->rchild,num);
+            a->rchild=create_node(num);
         }
-    }else if(num<a->data)
+        else
+        {
+            add_node(a->rchild,num);
+        }
+    }
+    else if(num<a->data)
     {
         if(a->lchild==NULL)
         {
-          a->lchild=create_node(num);
-        }else{
-        add_node(a->lchild,num);
+            a->lchild=create_node(num);
+        }
+        else
+        {
+            add_node(a->lchild,num);
         }
     }
 }
@@ -56,7 +63,7 @@ void m_travle(node * a)
     {
         m_travle(a->lchild);
     }
-     cout<<a->data<<" ";
+    cout<<a->data<<" ";
     if(a->rchild!=NULL)
     {
         m_travle(a->rchild);
@@ -78,22 +85,25 @@ void p_travle(node * a)
 
 int main()
 {
-int num;
-node * a;
-int middle;
-int i;
-while((cin>>num)&&num!=NULL)
-{
-cin>>middle;
-a=create_node(middle);
-for(i=0;i<num-1;i++)
-{
-    cin>>middle;
-add_node(a,middle);
-}
-f_travle(a);cout<<endl;
-m_travle(a);cout<<endl;
-p_travle(a);cout<<endl;
-}
+    int num;
+    node * a;
+    int middle;
+    int i;
+    while((cin>>num)&&num!=NULL)
+    {
+        cin>>middle;
+        a=create_node(middle);
+        for(i=0; i<num-1; i++)
+        {
+            cin>>middle;
+            add_node(a,middle);
+        }
+        f_travle(a);
+        cout<<endl;
+        m_travle(a);
+        cout<<endl;
+        p_travle(a);
+        cout<<endl;
+    }
     return 0;
 }

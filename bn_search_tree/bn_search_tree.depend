@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533209135 source:c:\users\simon\desktop\progects\summer_test\bn_search_tree\main.cpp
+	<iostream>
+	<malloc.h>
+	<stdio.h>
+
