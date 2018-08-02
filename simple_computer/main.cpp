@@ -103,7 +103,7 @@ int main()
             {
                 operation_buf=operation.top();
                 operation.pop();
-                //这个写的不是太好，如果还有其他运算符的话，应该再写一个比较优先级的函数
+                //这个写的不是  太好，如果还有其他运算符的话，应该再写一个比较优先级的函数
                 if((operation_buf=='+'||operation_buf=='-')&&(operation.top()=='*'||operation.top()=='/'))
                 {
                     //如果优先级低于后面的，先把相应的东西出栈，运算结束后再扔进来

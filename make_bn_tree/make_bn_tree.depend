@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1533196670 source:c:\users\simon\desktop\progects\summer_test\make_bn_tree\main.cpp
+	<iostream>
+	<malloc.h>
+

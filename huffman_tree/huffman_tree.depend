@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1533191986 source:c:\users\simon\desktop\progects\summer_test\huffman_tree\main.cpp
+	<iostream>
+	<queue>
+
