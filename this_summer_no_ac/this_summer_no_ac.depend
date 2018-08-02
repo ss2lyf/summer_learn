@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533173521 source:c:\users\simon\desktop\progects\summer_test\this_summer_no_ac\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
