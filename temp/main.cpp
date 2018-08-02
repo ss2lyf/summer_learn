@@ -4,11 +4,8 @@ using namespace std;
 int main()
 {
 
-   string a="sagasga";
-   string b;
-   b=a.substr(0,0);
-   cout<<b<<endl;
 
+cout<<-10%8<<endl;
     return 0;
 
 
