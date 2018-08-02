@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533169859 source:c:\users\simon\desktop\progects\summer_test\find_student_with_bn_search\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
