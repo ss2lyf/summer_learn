@@ -55,7 +55,7 @@ int main()
     }
     cin>>input;
     i=2;
-    while(i<=num&&input!=1)
+    while(i<=v.size()&&input!=1)
     {
         if(input%i==0)
         {
