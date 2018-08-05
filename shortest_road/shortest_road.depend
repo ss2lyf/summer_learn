@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1533479200 source:c:\users\simon\desktop\progects\summer_test\shortest_road\main.cpp
+	<iostream>
+	<limits>
+
