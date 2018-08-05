@@ -35,7 +35,6 @@ int find_root(vector<int>&v,int a)
 void compute_road(vector<int> &v,int a,int b)
 {
     int temp_a,temp_b;
-
 }
 int main()
 {
@@ -46,9 +45,8 @@ int main()
         num=10000000;
         vector<int> v(num+1);
         vector<int> s(num+1);
-
         init(v,num);
-        for(i=1;i<=num;i++)
+        for(i=1; i<=num; i++)
         {
             s[i]=1;
         }
@@ -56,16 +54,15 @@ int main()
         for(i=0; i<num1; i++)
         {
             cin>>temp1>>temp2;
-           temp_a=find_root(v,temp1);
-          temp_b=find_root(v,temp2);
-    if(temp_a!=temp_b)
-    {
-        v[temp_a]=temp_b;
-        s[temp_b]=s[temp_b]+s[temp_a];
-    }
+            temp_a=find_root(v,temp1);
+            temp_b=find_root(v,temp2);
+            if(temp_a!=temp_b)
+            {
+                v[temp_a]=temp_b;
+                s[temp_b]=s[temp_b]+s[temp_a];
+            }
         }
-
-        for(i=1;i<=num;i++)
+        for(i=1; i<=num; i++)
         {
             if(max_num<s[i])
             {
