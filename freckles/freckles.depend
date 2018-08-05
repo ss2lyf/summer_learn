@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1533478066 source:c:\users\simon\desktop\progects\summer_test\freckles\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<limits.h>
+	<math.h>
+
