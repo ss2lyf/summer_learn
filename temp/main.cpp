@@ -4,22 +4,10 @@
 using namespace std;
 int main()
 {
-    vector<int> v;
+    string a;
+    a=1+1>=2?"yes":"no";
 
-
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
-
-    while(true)
-    {
-        int n;
-        cin>>n;
-        int *m;
-        m=find(v.begin(),v.end(),n);
-        cout<<m<<endl;
-
-    }
+    cout<<a;
 
 
     return 0;

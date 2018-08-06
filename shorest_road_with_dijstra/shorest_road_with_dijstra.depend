@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1533552272 source:c:\users\simon\desktop\progects\summer_test\shorest_road_with_dijstra\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<limits.h>
+

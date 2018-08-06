@@ -1,7 +1,7 @@
 #include <iostream>
 #include<limits>
 using namespace std;
-
+//使用int_max做标记的时候一定要注意，是否会出现溢出问题
 int main()
 {
     int a[100][100];
