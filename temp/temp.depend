@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1533525590 source:c:\users\simon\desktop\progects\summer_test\temp\main.cpp
+1533557058 source:c:\users\simon\desktop\progects\summer_test\temp\main.cpp
 	<iostream>
-	<vector>
-	<algorithm>
+	<cstdio>
+	<cstring>
 

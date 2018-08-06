@@ -3,7 +3,7 @@
 #include<algorithm>
 #include<limits.h>
 using namespace std;
-int m [101][101];
+int m [1001][1001];
 /*input
 3 3
 1 2 5
@@ -26,16 +26,16 @@ int main()
 
     int num,num1;
     int i,j,temp,temp1;
-    int a,b,c;
+    int a,b,c,d;
     int min_d;
     cin>>num;
     vector<int> key;
     vector<int> distance(num+1);
     for(i=0; i<=num; i++)
     {
-        distance[i]=1001;
+        distance[i]=INT_MAX;
     }
-    distance[1]=0;
+
     for(i=0; i<=num; i++)
     {
         for(j=0; j<=num; j++)
@@ -47,18 +47,24 @@ int main()
             }
             else
             {
-                m[i][j]=1001;
+                m[i][j]=INT_MAX;
             }
         }
     }
     cin>>num1;
     for(i=0; i<num1; i++)
     {
-        cin>>a>>b>>c;
-        m[a][b]=c;
-        m[b][a]=c;
+        cin>>a>>b>>c>>d;
+        //无向图能给两个边，这个测试用例也是牛逼
+        if(c*10000+d<m[a][b])
+       {m[a][b]=c*10000+d;
+       m[b][a]=c*10000+d;
+       }
+       // m[b][a]=c+double(d)/1000000;
     }
-    key.push_back(1);
+    cin>>a>>b;
+     distance[a]=0;
+      key.push_back(a);
     while(key.size()<num)
     {
         temp=key.size();
@@ -68,10 +74,11 @@ int main()
             temp1=key[temp-1];
             for(j=1; j<=num; j++)
             {
+               if(m[temp1][j]!=INT_MAX){
                 if(distance[j]>distance[temp1]+m[temp1][j])
                 {
                     distance[j]=distance[temp1]+m[temp1][j];
-                }
+                }}
             }
         }
         min_d=INT_MAX;
@@ -86,10 +93,9 @@ int main()
         key.push_back(temp);
     }
 //输出1到每一个点的距离，然后结束，卧槽，终于tmd结束了，日
-    for(i=1; i<=num; i++)
-    {
-        cout<<distance[i]<<endl;
-    }
+a=distance[b]/10000;
+b=distance[b]%10000;
+cout<<a<<" "<<b<<endl;
     return 0;
 }
 

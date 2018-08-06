@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1533558239 source:c:\users\simon\desktop\progects\summer_test\shortest_road_with_cost\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<limits.h>
+
