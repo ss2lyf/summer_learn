@@ -57,14 +57,15 @@ int main()
         cin>>a>>b>>c>>d;
         //无向图能给两个边，这个测试用例也是牛逼
         if(c*10000+d<m[a][b])
-       {m[a][b]=c*10000+d;
-       m[b][a]=c*10000+d;
-       }
-       // m[b][a]=c+double(d)/1000000;
+        {
+            m[a][b]=c*10000+d;
+            m[b][a]=c*10000+d;
+        }
+        // m[b][a]=c+double(d)/1000000;
     }
     cin>>a>>b;
-     distance[a]=0;
-      key.push_back(a);
+    distance[a]=0;
+    key.push_back(a);
     while(key.size()<num)
     {
         temp=key.size();
@@ -74,11 +75,14 @@ int main()
             temp1=key[temp-1];
             for(j=1; j<=num; j++)
             {
-               if(m[temp1][j]!=INT_MAX){
-                if(distance[j]>distance[temp1]+m[temp1][j])
+                //如果用矩阵的话，这个判断可以省时间
+                if(m[temp1][j]!=INT_MAX)
                 {
-                    distance[j]=distance[temp1]+m[temp1][j];
-                }}
+                    if(distance[j]>distance[temp1]+m[temp1][j])
+                    {
+                        distance[j]=distance[temp1]+m[temp1][j];
+                    }
+                }
             }
         }
         min_d=INT_MAX;
@@ -93,9 +97,9 @@ int main()
         key.push_back(temp);
     }
 //输出1到每一个点的距离，然后结束，卧槽，终于tmd结束了，日
-a=distance[b]/10000;
-b=distance[b]%10000;
-cout<<a<<" "<<b<<endl;
+    a=distance[b]/10000;
+    b=distance[b]%10000;
+    cout<<a<<" "<<b<<endl;
     return 0;
 }
 
