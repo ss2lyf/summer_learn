@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533610057 source:c:\users\simon\desktop\progects\summer_test\cola\main.cpp
+	<iostream>
+	<queue>
+	<stdio.h>
+
