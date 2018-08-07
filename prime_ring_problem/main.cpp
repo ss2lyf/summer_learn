@@ -6,7 +6,6 @@ int prime[13]= {2,3,5,7,11,13,17,19,23,29,31,37,41};
 //数量少的时候穷举确实不错，但是要确定自己写的是对的
 bool is_prime(int number)
 {
-
     for( int i=0; i<num; i++)
     {
         if(prime[i]==number)
@@ -55,7 +54,6 @@ void find_prime(vector <int> &v,vector <int> &key)
 
 int main()
 {
-
     int i;
     int count_case=1;
     while((cin>>num)&&num!=NULL)
