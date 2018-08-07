@@ -51,7 +51,7 @@ int main()
             cin>>temp;
             v.push_back(temp);
         }
-        cout<<findLongest(v,num);
+        cout<<findLongest(v,num)<<endl;;
         v.clear();
     }
 }
