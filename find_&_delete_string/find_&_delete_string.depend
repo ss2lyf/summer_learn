@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1533731647 source:c:\users\simon\desktop\progects\summer_test\find_&_delete_string\main.cpp
+	<iostream>
+	<string>
+	<cctype>
+	<algorithm>
+	<stdio.h>
+
