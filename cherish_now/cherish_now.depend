@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533729288 source:c:\users\simon\desktop\progects\summer_test\cherish_now\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
